@@ -7,7 +7,7 @@ const getVisibleMovies = (movies, query) => {
   if (query) {
     const preparedQuery = query.trim().toLowerCase();
 
-    return [...movies].filter(movie => {
+    return movies.filter(movie => {
       return (
         movie.title.toLowerCase().includes(preparedQuery) ||
         movie.description.toLowerCase().includes(preparedQuery)
